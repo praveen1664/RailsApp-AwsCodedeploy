@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - gem install bundler
+      - bundle install
+  build:
+    commands:
+      - bundle exec rails test
+  post_build:
+    commands:
+      - echo 'Test completed!'
